@@ -1,0 +1,68 @@
+
+
+  <div id="cart">
+        <h1> You Cart </h1>
+  </div>
+
+
+  @if (cartItems.length === 0) {
+
+     <div id="noit">
+        <p> You have no items in your cart </p>
+     </div>
+
+  }@else{
+
+     <div id="father">
+
+       <ul>
+   
+         @for (product of cartItems; track product) {
+
+           <li [class]="product.Quantite > 10 ? 'prd_nor' : 'prd_low'" >
+
+             <div class="container">
+
+             <img [src]= "product.itemProduct.img_url" alt="img not found ">
+
+            <div>
+                 
+          <p>
+                {{product.itemProduct.productTitle}}
+          </p>
+
+          <p>
+
+              {{product.itemProduct.productDescription}}
+
+          </p>
+
+       </div>
+
+       <div id="secdiv">
+
+            <p>  {{ product.itemProduct.productPrice}} DH </p>
+ 
+             
+              <button type="button"  class="btn" (click)="remove_item(product)" > - </button>
+       </div>
+
+        
+      
+      <!-- <button type="button" class="btn" (click)=""> ajouter au panier</button> -->
+      
+
+      </div>
+
+       
+      </li>
+
+      <hr>
+    }
+
+  </ul>
+
+</div>
+  
+
+  }

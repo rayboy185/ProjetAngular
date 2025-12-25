@@ -1,0 +1,71 @@
+
+<div class="container1">
+
+    <ul class="navbar">
+
+       <li> <a href="" routerLink="/catalog/SmartPhone"> Smart Phone </a> </li> 
+      <li> <a href="" routerLink="/catalog/tv"> Tv </a> </li>
+      <li> <a href="" routerLink="/catalog/tablet">  Tablet </a> </li>
+      <li> <a href="" routerLink="/catalog/all"> All </a> </li>
+    </ul>
+
+</div>
+
+<hr class="c1hr">
+
+
+<div id="father">
+
+<ul>
+
+  @for (product of items_products; track product) {
+    <li [class]="product.Quantite > 10 ? 'prd_nor' : 'prd_low'" >
+      <!-- @if (product.Quantite != 0) { ce traitement est fait dans la composant avec la methode filter-->
+
+      <div class="container">
+
+      <img [src]= "product.itemProduct.img_url" alt="img not found ">
+
+       <div>
+          <p>
+                {{product.itemProduct.productTitle}}
+          </p>
+
+          <p>
+
+              {{product.itemProduct.productDescription}}
+
+          </p>
+
+       </div>
+
+       <hr id="revHr">
+
+       <div id="secdiv">
+
+             <p>  {{ product.itemProduct.productPrice}} DH </p>
+
+             <button type="button"  class="btn" (click)="addToCartAndNavigate(product)"> Buy </button>
+
+             
+       </div>
+      
+      <!-- <button type="button" class="btn" (click)=""> ajouter au panier</button> -->
+      
+
+      </div>
+
+       <hr>
+      </li>
+    }
+
+  </ul>
+
+</div>
+
+
+ <!-- <app-cart-component [prd_id]="prdct_id" ></app-cart-component> -->
+
+  <!-- <app-product-details-component [show_det]="show_det" [prdct_id]="prdct_id"></app-product-details-component> -->
+
+

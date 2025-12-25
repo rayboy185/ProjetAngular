@@ -1,0 +1,132 @@
+
+.container1{
+
+    
+  display: flex;     
+  justify-content: center;      
+  align-items: center;          
+  width: 1000px;
+  height: 50px;
+  /* margin: auto;                   */
+  margin-left: 50px;
+}
+
+.container1 ul li {
+
+    margin-right: 5px;
+    margin-left: 90px;
+}
+
+.container1 ul li a{
+
+    width: 100px;
+}
+
+.c1hr{
+
+    width: 890px;
+    margin-left: 130px;
+}
+
+
+.navbar{
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+
+.navbar li{
+
+  float: left;
+
+}
+
+
+.navbar li a {
+  display: block;
+  color: blueviolet;
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration: none;
+  width: 50px;
+  text-decoration: underline;
+}
+
+
+
+
+
+.container2{
+
+  display: grid;
+
+ grid-template-columns: auto auto auto;
+
+ width: 920px;
+
+ margin-left: 14%;
+
+ margin-top: 2%;
+
+ row-gap: 0px;
+
+}
+
+.container2 img{
+
+    height: 150px;
+    width: 150px;
+}
+
+
+.container2 a{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 200px;
+
+    text-decoration: none;
+}
+
+.phone{
+
+
+  grid-column: 1;
+}
+
+.tv{
+
+   grid-column:2 ;
+}
+
+
+.tablet{
+
+    grid-column: 3;   
+}
+
+
+.prd_nor{
+
+color: blue;
+margin-bottom: 30px;
+
+}
+
+
+.prd_low{
+
+color: red;
+margin-bottom: 30px;
+
+}

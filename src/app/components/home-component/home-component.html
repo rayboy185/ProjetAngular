@@ -1,0 +1,64 @@
+
+
+<div class="container1">
+
+    <ul class="navbar">
+
+      <li> <a href="" routerLink="/SmartPhone"> Smart Phone </a> </li>
+      <li> <a href="" routerLink="/Tv"> Tv </a> </li>
+      <li> <a href="" routerLink="/Tablet">  Tablet </a> </li>
+      <li> <a href="" routerLink="/All"> All </a> </li>
+    </ul>
+
+</div>
+
+<hr class="c1hr">
+
+
+  @if(items_products.length != 0){
+
+<div class="container2">
+  
+      @for (product of items_products ;track product){
+
+      @if(product.itemProduct.productType === "SmartPhone"){
+
+         <a  href="" [class]="product.Quantite > 10 ? 'prd_nor' : 'prd_low' " class="phone" [routerLink]="['/catalog',product.itemProduct.productType,product.itemProduct.productId]">
+           
+           <img [src]="product.itemProduct.img_url" alt="image not found">
+
+           <p> {{product.itemProduct.productTitle}}</p>
+
+         </a>
+
+        }@else if(product.itemProduct.productType === "tablet"){
+   
+          <a  href="" [class]="product.Quantite > 10 ? 'prd_nor' : 'prd_low' " class="tablet" [routerLink]="['/catalog',product.itemProduct.productType,product.itemProduct.productId]">
+           
+           <img [src]="product.itemProduct.img_url" alt="image not found">
+
+           <p> {{product.itemProduct.productTitle}}</p>
+
+          </a>
+
+
+        }@else{
+
+         <a href="" routerLink="/catalog" [class]="product.Quantite > 10 ? 'prd_nor' : 'prd_low' " class="tv" [routerLink]="['/catalog',product.itemProduct.productType,product.itemProduct.productId]">
+           
+           <img [src]="product.itemProduct.img_url" alt="image not found">
+
+            <p> {{product.itemProduct.productTitle}}</p>
+
+         </a>
+
+        }
+
+         
+      }
+      
+
+</div>
+
+
+  }

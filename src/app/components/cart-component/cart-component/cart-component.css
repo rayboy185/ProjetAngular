@@ -1,0 +1,78 @@
+
+
+#cart{
+
+    margin-left: 40%;
+}
+
+
+#noit{
+
+    margin-left: 38%;
+}
+
+
+
+#father{
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-left: auto;
+
+    margin-top: 30px;
+}
+
+#father hr{
+
+     width: 800px; 
+     margin-left: -1px; 
+     margin-top: 10px;
+}
+
+#father #secdiv{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center; 
+
+    margin-left: 28px;
+
+    padding-left: 20px;
+}
+
+.container {
+
+     display: flex; 
+     flex-direction: row; 
+     justify-content: left;
+      align-items: center;
+      margin-top: -10px;
+      /* margin-right: 200px; */
+    
+}
+
+.container img{
+
+    height:  170px;
+
+    width:  170px;
+}
+
+.container div {
+
+    width: 220px;
+
+    margin-left: 30px;
+}
+
+.container button{
+
+    height: 35px;
+    width: 100px;
+}

@@ -1,0 +1,24 @@
+
+
+<div class="container">
+
+  <ul class="navbar">
+    <li> <a routerLink="/home" class="Active_link">  Home </a> </li>
+    <li> <a routerLink="/catalog"> Catalog   </a> </li>
+    <li> <a routerLink="/cart" class="Active_link">    Cart      </a> </li>
+  </ul>
+
+   <ul class="navbar" id="child2" >
+    <li> <a routerLink="/signin" class="Active_link" >  Sign In </a> </li>
+    <li> <a routerLink="/register" class="Active_link" > Register   </a> </li>    
+   </ul>
+
+</div>
+
+<hr>
+
+<main>
+
+  <router-outlet> </router-outlet>
+
+</main>
